@@ -1,5 +1,6 @@
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
+const chatSidebar = document.querySelector('.chat-sidebar');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
@@ -52,4 +53,6 @@ function outputUsers(users) {
   userList.innerHTML = `
     ${users.map(user => `<li>${user.username}</li>`).join('')}
   `;
+
+  chatSidebar.scrollTop = chatSidebar.scrollHeight;
 }
