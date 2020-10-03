@@ -9,7 +9,3 @@ RUN apt-get upgrade -y
 
 # Install nano and git
 RUN apt-get install nano git -y
-
-# Clone nodeJS code
-# RUN git clone --depth 1 https://github.com/dev-techwithus/sample-nodejs.git /usr/share/nodejs
-# RUN npm install --prefix /usr/share/nodejs

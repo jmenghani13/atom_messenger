@@ -11,9 +11,8 @@ services:
     ports:
       - "${NODEJSPORT}:3000"
     volumes:
-      - web:/usr/share/nodejs
+      - ${NODEJS_WRK_DIR-./web}:/usr/share/nodejs/
       - ${NODEJS_LOGS_DIR-./logs/nodejs/}:/root/.npm/_logs/
-      - ${NODEJS_APP_LOGS_DIR-./logs/app_nodejs/}:/usr/share/nodejs/logs/
     working_dir: /usr/share/nodejs/
     environment:
       - NODE_ENV=${NODEJSDEPLOYMENTMODEL}
